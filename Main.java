@@ -1,14 +1,14 @@
 public class Main {
-  // public static void printName(String firstName, String lastName) {
-  //   System.out.println("the firstName is : " + firstName);
-  //   System.out.println("the last name is : " + lastName);
-  // }
-  //
-  // public static void printArrayOfInt(int[] arr) {
-  //   for (int i = 0; i < arr.length; i++) {
-  //     System.out.println(arr[i]);
-  //   }
-  // }
+  static void printName(String firstName, String lastName) {
+    System.out.println("the firstName is : " + firstName);
+    System.out.println("the last name is : " + lastName);
+  }
+
+  static void printArrayOfInt(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+  }
 
   public static void main(String[] args) {
     // // 1- variables  and types
@@ -47,7 +47,7 @@ public class Main {
     String firstName = "youssef";
     String lastName = "taoussi";
     String fullName = firstName + lastName;
-    int length = txt.length();
+    // int length = txt.length();
     String upperCaseTxt = txt.toUpperCase();
     String lowerCaseTxt = txt.toLowerCase();
     String concatFullName = firstName.concat(lastName);
@@ -66,13 +66,14 @@ public class Main {
     // 6- arrays
     String[] names = {"youssef", "amine", "ahmed", "yassine", "soufaine", "adam"};
     int[] numbers = {1, 3, 5, 6, 10, 0};
-    for (String name : names) {
-      System.out.println(name);
+    for (String nam : names) {
+      System.out.println(nam);
     }
     for (int num : numbers) {
       System.out.println(num);
     }
 
+    System.out.println(name.charAt(0));
     // 7  methods
     int[] arrOfInt = {1, 43, 42, 532, 31};
     printName(firstName, lastName);
