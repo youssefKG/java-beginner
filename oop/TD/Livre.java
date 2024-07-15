@@ -1,8 +1,8 @@
 public class Livre {
   private String title, author;
   private int nbPages;
-
-  public Livre() {}
+  private float price;
+  private boolean prixFix = false;
 
   public Livre(String authorName, String bookName) {
     author = authorName;
@@ -15,38 +15,33 @@ public class Livre {
     nbPages = bookPages;
   }
 
-  public String getAuthor() {
-    return author;
-  }
-
-  public String getTitle() {
-    return title;
-  }
-
-  public void setNumberPages(int livrePageNumber) {
-    nbPages = livrePageNumber;
-  }
-
-  public int getPageNumber() {
-    return nbPages;
-  }
-
-  public void updateBook(int nb) {
-    if (nb >= 0) {
-      nbPages = nb;
+  public Livre(float p) {
+    if (prixFix) {
+      System.out.println("you  can only updte the price once ");
       return;
     }
-    System.out.println("you cannot add negative number ");
+    price = p;
+    prixFix = true;
   }
 
-  public void updateBook(String bookName, String authorName) {
-    title = bookName;
-    author = authorName;
+  public void setPrice(float newPrice) {
+    if (prixFix) {
+      System.out.println("you can only update the price once ");
+      return;
+    }
+
+    price = newPrice;
+    prixFix = true;
+  }
+
+  public float getPrice() {
+    return price;
   }
 
   public void afficheToi() {
     System.out.println("the book name is:  " + title);
     System.out.println("the author  name is:  " + author);
     System.out.println("the number of book pages is : " + nbPages);
+    System.out.println("the book price is :" + price);
   }
 }
