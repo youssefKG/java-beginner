@@ -2,9 +2,17 @@ public class Livre {
   private String title, author;
   private int nbPages;
 
-  public Livre(String livreTitle, String livreAuthor) {
-    title = livreTitle;
-    author = livreAuthor;
+  public Livre() {}
+
+  public Livre(String authorName, String bookName) {
+    author = authorName;
+    title = bookName;
+  }
+
+  public Livre(String authorName, String bookName, int bookPages) {
+    author = authorName;
+    title = bookName;
+    nbPages = bookPages;
   }
 
   public String getAuthor() {
@@ -34,5 +42,11 @@ public class Livre {
   public void updateBook(String bookName, String authorName) {
     title = bookName;
     author = authorName;
+  }
+
+  public void afficheToi() {
+    System.out.println("the book name is:  " + title);
+    System.out.println("the author  name is:  " + author);
+    System.out.println("the number of book pages is : " + nbPages);
   }
 }

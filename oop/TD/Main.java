@@ -1,18 +1,11 @@
 public class Main {
   public static void main(String[] args) {
-    Livre book1 = new Livre("Crime and Punishement", "dostoviski");
-    Livre book2 = new Livre("a (L'Alchimiste) Novel by Paulo Coelho rch", "Paulo Coello");
-    int nombrePages;
+    Livre book1 = new Livre();
+    Livre book2 = new Livre("author", "title");
+    Livre book3 = new Livre("author 3 ", "title 3", 300);
 
-    book1.updateBook(12);
-    book2.updateBook(14);
-
-    System.out.println("the nombre of pages of book 1: " + book1.getPageNumber());
-    System.out.println("the nombre of pages of book 2: " + book2.getPageNumber());
-    System.out.println("the title of book 1: : " + book1.getTitle());
-
-    nombrePages = book1.getPageNumber() + book2.getPageNumber();
-
-    System.out.println("the pages total is : " + nombrePages);
+    book1.afficheToi();
+    book2.afficheToi();
+    book3.afficheToi();
   }
 }
