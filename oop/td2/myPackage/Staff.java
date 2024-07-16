@@ -19,7 +19,7 @@ public class Staff extends Person {
   }
 
   public double getPay(double pay) {
-    this.pay = pay;
+    return this.pay = pay;
   }
 
   public void setPay(double pay) {
